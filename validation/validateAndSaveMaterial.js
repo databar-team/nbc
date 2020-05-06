@@ -220,7 +220,8 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
         errorCode: 2,
         errorMessage: e.message
       };
-      const statusMessage = e.message.includes("Material Validation Failed for ${material.Material.MatId}");      log.error(statusMessage, logContext);
+      const statusMessage = e.message.includes("Material Validation Failed for ${material.Material.MatId}");      
+      log.error(statusMessage, logContext);
       promises.push(
         statusSender.send("Error", {
           workOrderId: workOrderId,

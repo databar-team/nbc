@@ -157,7 +157,7 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
   try {
     material = await readFromBucketUsingURI(event.rawMaterialMetadataInputFile);
   } catch (e) {
-    const statusMessage = "Material Validation Failed for ${material.Material.MatId}";
+    const statusMessage = "materialsValid";
     await statusSender.send("Error", {
       workOrderId: workOrderId,
       jobId: event.jobId,
@@ -210,7 +210,7 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
           statusSender.send("Done", {
             workOrderId: workOrderId,
             jobId: event.jobId,
-            statusMessage: `Material Validation Complete for  ${material.Material.MatId}`
+            statusMessage: `Material ${material.Material.MatId} Successfully Validated & Saved at ${event.materialMetadataOutputFile}`
           })
         );
         promises.push(s3Promise);
@@ -220,7 +220,7 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
         errorCode: 2,
         errorMessage: e.message
       };
-      const statusMessage = e.message.includes("Material Validation Failed for ${material.Material.MatId}");      
+      const statusMessage = e.message.includes("Waiting for Mediator to finish transferring") ? "Pending Transfer." : "materialsValid";      
       log.error(statusMessage, logContext);
       promises.push(
         statusSender.send("Error", {

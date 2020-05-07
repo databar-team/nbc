@@ -148,6 +148,12 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
   log.info(`Starting validation of work order`, logContext);
   const validatingStatus = "Validating Material.";
   await statusSender.send("Running", {
+    requester: "WorkOrderBacklog",
+    cpId,
+    jobType: "cp-Validation",
+    jobStatus: statusMap[jobStatus.toLowerCase()],
+    percentComplete: percent || null,
+    timestamp: Date.now(),
     workOrderId: workOrderId,
     jobId: event.jobId,
     statusMessage: validatingStatus
@@ -159,6 +165,12 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
   } catch (e) {
     const statusMessage = "materialsValid";
     await statusSender.send("Error", {
+      requester: "WorkOrderBacklog",
+    cpId,
+    jobType: "cp-Validation",
+    jobStatus: statusMap[jobStatus.toLowerCase()],
+    percentComplete: percent || null,
+    timestamp: Date.now(),
       workOrderId: workOrderId,
       jobId: event.jobId,
       statusMessage,
@@ -208,6 +220,12 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
 
         const s3Promise = writeToBucketUsingURI(event.materialMetadataOutputFile, material).then(() =>
           statusSender.send("Done", {
+            requester: "WorkOrderBacklog",
+    cpId,
+    jobType: "cp-Validation",
+    jobStatus: statusMap[jobStatus.toLowerCase()],
+    percentComplete: percent || null,
+    timestamp: Date.now(),
             workOrderId: workOrderId,
             jobId: event.jobId,
             statusMessage: `Material ${material.Material.MatId} Successfully Validated & Saved at ${event.materialMetadataOutputFile}`
@@ -224,6 +242,12 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
       log.error(statusMessage, logContext);
       promises.push(
         statusSender.send("Error", {
+          requester: "WorkOrderBacklog",
+    cpId,
+    jobType: "cp-Validation",
+    jobStatus: statusMap[jobStatus.toLowerCase()],
+    percentComplete: percent || null,
+    timestamp: Date.now(),
           workOrderId: workOrderId,
           jobId: event.jobId,
           statusMessage,

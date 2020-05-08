@@ -1,7 +1,9 @@
 // To run:
-// AWS_PROFILE=nbc node readFromKinesis.js
+// AWS_PROFILE=saml node readFromKinesis.js
 
-const AWS = require("aws-sdk");
+// const AWS = require("aws-sdk");
+const AWS = require('/usr/local/lib/node_modules/aws-sdk');
+
 AWS.config.update({ region: process.env.AWS_REGION || "us-east-1" });
 const kinesis = new AWS.Kinesis();
 function catcher(err) {
@@ -22,6 +24,7 @@ function getRecords(iter) {
         try {
           const r = JSON.parse(data);
           allRecords.push(r);
+          console.log("\n==========================================\n");
           console.log(JSON.stringify(r, null, 2));
           fs.appendFile('status.txt', JSON.stringify(r, null, 2), (err) =>{
             if(err) throw err;
@@ -42,7 +45,9 @@ function getRecords(iter) {
   }
 }
 
-const StreamName = "cp-pr-44-bf5c7-validation";
+// const StreamName = "cp-pr-44-bf5c7-validation";
+const StreamName = "cp-status-pr-44-bf5c7";
+
 
 async function run() {
   return await kinesis.describeStream({

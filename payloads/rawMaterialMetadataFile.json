@@ -1,0 +1,1900 @@
+{
+  "Material": {
+    "Id": 1000073656,
+    "MatId": "GMO_00000000121528_01",
+    "Title": "AMERICAN HONEY",
+    "Trim": {
+      "Nanos": 0,
+      "Rate": "P23_976",
+      "Time": "00:00:00:00"
+    },
+    "Duration": {
+      "Nanos": 9950523837142,
+      "Rate": "P23_976",
+      "Time": "02:45:50:12"
+    },
+    "FrameRate": "P23_976",
+    "MaterialType": "Feature",
+    "AspectRatio": "1.33",
+    "VersionType": "OM-FTEXTED",
+    "VersionDescription": "OM Fully Texted",
+    "LastEdited": "2020-03-27T10:42:49.000",
+    "Transformation": "Side Matte",
+    "Owner": [],
+    "TrackTypeLink": [
+      {
+        "Id": 1000089620,
+        "TrackTypeName": "Video",
+        "TrackType": {
+          "Name": "Video",
+          "DefaultPosition": 0,
+          "FileTag": "vid",
+          "LanguageId": 0,
+          "Ordinality": 0,
+          "ClassId": "VIDEO",
+          "Id": 1
+        },
+        "StateName": "Ready",
+        "TrackTypeClass": {
+          "ClassName": "Video",
+          "Id": 1
+        },
+        "StateMachine": "NBC GMO",
+        "TrackTypeId": 1,
+        "UserName": "julia",
+        "ShortTextList": {
+          "ShortText": [
+            {
+              "Id": 40901,
+              "Key": 40901,
+              "ShortTextType": "Transition Date",
+              "Value": "2017-06-08T21:36:34",
+              "Ordinality": 1,
+              "Type": "date"
+            }
+          ]
+        },
+        "TagList": {
+          "Tag": []
+        },
+        "StateNameI18nKey": "state.ready",
+        "StateMachineId": 120,
+        "StateId": 45
+      },
+      {
+        "Id": 1000089724,
+        "TrackTypeName": "Audio Description English (US)",
+        "TrackType": {
+          "Name": "Audio Description English (US)",
+          "DefaultPosition": 0,
+          "FileTag": "AUD_EN-US",
+          "LanguageId": 625,
+          "Ordinality": 0,
+          "ClassId": "AUDIO",
+          "Id": 196
+        },
+        "StateName": "Ready",
+        "TrackTypeClass": {
+          "ClassName": "Audio",
+          "Id": 2
+        },
+        "StateMachine": "NBC GMO",
+        "TrackTypeId": 196,
+        "UserName": "julia",
+        "ShortTextList": {
+          "ShortText": [
+            {
+              "Id": 41010,
+              "Key": 41010,
+              "ShortTextType": "Component Audio Adjustment",
+              "Ordinality": 1,
+              "Type": "number"
+            },
+            {
+              "Id": 41006,
+              "Key": 41006,
+              "ShortTextType": "Original File Name",
+              "Value": "Audio_04108_EN-US.wav",
+              "Ordinality": 1,
+              "Type": "identifier"
+            },
+            {
+              "Id": 41007,
+              "Key": 41007,
+              "ShortTextType": "Upload Path",
+              "Value": "/srv/delivery/component_upload/",
+              "Ordinality": 1,
+              "Type": "text"
+            }
+          ]
+        },
+        "TagList": {
+          "Tag": []
+        },
+        "StateNameI18nKey": "state.ready",
+        "StateMachineId": 120,
+        "StateId": 45
+      },
+      {
+        "Id": 1000089725,
+        "TrackTypeName": "Closed Caption English (US)",
+        "TrackType": {
+          "Name": "Closed Caption English (US)",
+          "DefaultPosition": 0,
+          "FileTag": "CCA_EN-US",
+          "LanguageId": 487,
+          "Ordinality": 0,
+          "ClassId": "SUBTITLE",
+          "Id": 364
+        },
+        "StateName": "Ready",
+        "TrackTypeClass": {
+          "ClassName": "Subtitle",
+          "Id": 4
+        },
+        "StateMachine": "NBC GMO",
+        "TrackTypeId": 364,
+        "UserName": "julia",
+        "ShortTextList": {
+          "ShortText": [
+            {
+              "Id": 41008,
+              "Key": 41008,
+              "ShortTextType": "Original File Name",
+              "Value": "CC_04108_EN-US.scc",
+              "Ordinality": 1,
+              "Type": "identifier"
+            },
+            {
+              "Id": 41009,
+              "Key": 41009,
+              "ShortTextType": "Upload Path",
+              "Value": "/srv/delivery/component_upload/",
+              "Ordinality": 1,
+              "Type": "text"
+            }
+          ]
+        },
+        "TagList": {
+          "Tag": []
+        },
+        "StateNameI18nKey": "state.ready",
+        "StateMachineId": 120,
+        "StateId": 45
+      },
+      {
+        "Id": 1000089626,
+        "TrackTypeName": "MOS",
+        "TrackType": {
+          "Name": "MOS",
+          "DefaultPosition": 0,
+          "FileTag": "MOS",
+          "LanguageId": 0,
+          "Ordinality": 0,
+          "ClassId": "AUDIO",
+          "Id": 419
+        },
+        "StateName": "Ready",
+        "TrackTypeClass": {
+          "ClassName": "Audio",
+          "Id": 2
+        },
+        "StateMachine": "NBC GMO",
+        "TrackTypeId": 419,
+        "UserName": "julia",
+        "ShortTextList": {
+          "ShortText": []
+        },
+        "TagList": {
+          "Tag": []
+        },
+        "StateNameI18nKey": "state.ready",
+        "StateMachineId": 120,
+        "StateId": 45
+      },
+      {
+        "Id": 1000089624,
+        "TrackTypeName": "Stereo English (US)",
+        "TrackType": {
+          "Name": "Stereo English (US)",
+          "DefaultPosition": 0,
+          "FileTag": "STE_EN-US",
+          "LanguageId": 487,
+          "Ordinality": 0,
+          "ClassId": "AUDIO",
+          "Id": 195
+        },
+        "StateName": "Ready",
+        "TrackTypeClass": {
+          "ClassName": "Audio",
+          "Id": 2
+        },
+        "StateMachine": "NBC GMO",
+        "TrackTypeId": 195,
+        "UserName": "julia",
+        "ShortTextList": {
+          "ShortText": []
+        },
+        "TagList": {
+          "Tag": []
+        },
+        "StateNameI18nKey": "state.ready",
+        "StateMachineId": 120,
+        "StateId": 45
+      },
+      {
+        "Id": 1000089625,
+        "TrackTypeName": "Stereo M&E",
+        "TrackType": {
+          "Name": "Stereo M&E",
+          "DefaultPosition": 0,
+          "FileTag": "STE_MNE",
+          "LanguageId": 632,
+          "Ordinality": 0,
+          "ClassId": "AUDIO",
+          "Id": 399
+        },
+        "StateName": "Ready",
+        "TrackTypeClass": {
+          "ClassName": "Audio",
+          "Id": 2
+        },
+        "StateMachine": "NBC GMO",
+        "TrackTypeId": 399,
+        "UserName": "julia",
+        "ShortTextList": {
+          "ShortText": []
+        },
+        "TagList": {
+          "Tag": []
+        },
+        "StateNameI18nKey": "state.ready",
+        "StateMachineId": 120,
+        "StateId": 45
+      },
+      {
+        "Id": 1000089622,
+        "TrackTypeName": "Surround C/LFE English (US)",
+        "TrackType": {
+          "Name": "Surround C/LFE English (US)",
+          "DefaultPosition": 0,
+          "FileTag": "SCN_EN-US",
+          "LanguageId": 487,
+          "Ordinality": 0,
+          "ClassId": "AUDIO",
+          "Id": 206
+        },
+        "StateName": "Ready",
+        "TrackTypeClass": {
+          "ClassName": "Audio",
+          "Id": 2
+        },
+        "StateMachine": "NBC GMO",
+        "TrackTypeId": 206,
+        "UserName": "julia",
+        "ShortTextList": {
+          "ShortText": []
+        },
+        "TagList": {
+          "Tag": []
+        },
+        "StateNameI18nKey": "state.ready",
+        "StateMachineId": 120,
+        "StateId": 45
+      },
+      {
+        "Id": 1000089621,
+        "TrackTypeName": "Surround Front English (US)",
+        "TrackType": {
+          "Name": "Surround Front English (US)",
+          "DefaultPosition": 0,
+          "FileTag": "SFR_EN-US",
+          "LanguageId": 487,
+          "Ordinality": 0,
+          "ClassId": "AUDIO",
+          "Id": 207
+        },
+        "StateName": "Ready",
+        "TrackTypeClass": {
+          "ClassName": "Audio",
+          "Id": 2
+        },
+        "StateMachine": "NBC GMO",
+        "TrackTypeId": 207,
+        "UserName": "julia",
+        "ShortTextList": {
+          "ShortText": []
+        },
+        "TagList": {
+          "Tag": []
+        },
+        "StateNameI18nKey": "state.ready",
+        "StateMachineId": 120,
+        "StateId": 45
+      },
+      {
+        "Id": 1000089623,
+        "TrackTypeName": "Surround Rear English (US)",
+        "TrackType": {
+          "Name": "Surround Rear English (US)",
+          "DefaultPosition": 0,
+          "FileTag": "SRE_EN-US",
+          "LanguageId": 487,
+          "Ordinality": 0,
+          "ClassId": "AUDIO",
+          "Id": 208
+        },
+        "StateName": "Ready",
+        "TrackTypeClass": {
+          "ClassName": "Audio",
+          "Id": 2
+        },
+        "StateMachine": "NBC GMO",
+        "TrackTypeId": 208,
+        "UserName": "julia",
+        "ShortTextList": {
+          "ShortText": []
+        },
+        "TagList": {
+          "Tag": []
+        },
+        "StateNameI18nKey": "state.ready",
+        "StateMachineId": 120,
+        "StateId": 45
+      }
+    ],
+    "Track": [
+      {
+        "Id": 1000017105,
+        "FileId": "GMO_00000000121528_01",
+        "Incode": {
+          "Nanos": 3453449972400,
+          "Rate": "P23_976",
+          "Text": "00:57:30:00"
+        },
+        "Outcode": {
+          "Nanos": 13403932101209,
+          "Rate": "P23_976",
+          "Text": "03:43:10:13"
+        },
+        "DeleteMark": 0,
+        "FrameRate": "P23_976",
+        "Encoded": true,
+        "MediaName": "DIVA_2398_LF_HD_PRORES",
+        "Media": {
+          "Id": 4,
+          "Name": "DIVA_2398_LF_HD_PRORES",
+          "MediaType": "Generic",
+          "MediaClassName": "Data disk",
+          "FrameRate": "P23_976",
+          "MachineNumber": 0,
+          "RelativePath": "",
+          "PlayWhileRecord": false,
+          "FilenameFactoryName": "",
+          "Materials": [],
+          "DirectoryNameFactoryName": "FlatListDirectoryNameFactory",
+          "Owner": [],
+          "MetaDataGroup": []
+        },
+        "FileExtension": "mov",
+        "PartIndex": 0,
+        "PartCount": 0,
+        "IngestDate": "2017-09-30T09:00:21.000",
+        "FileBytes": 231337127936,
+        "TrackDefinition": [
+          {
+            "Id": 1000076159,
+            "TrackTypeName": "Video",
+            "TrackType": {
+              "Name": "Video",
+              "DefaultPosition": 0,
+              "FileTag": "vid",
+              "LanguageId": 0,
+              "Ordinality": 0,
+              "ClassId": "VIDEO",
+              "Id": 1
+            },
+            "TrackTypeId": 1,
+            "Position": 1,
+            "FilePosition": 0,
+            "Channels": 1,
+            "Format": "ProRes",
+            "BitRate": 171746004,
+            "Width": 1920,
+            "Height": 1080,
+            "ChromaSubsampling": "4:2:2",
+            "ScanType": "Progressive"
+          },
+          {
+            "Id": 1000076160,
+            "TrackTypeName": "Surround Front English (US)",
+            "TrackType": {
+              "Name": "Surround Front English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SFR_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 207
+            },
+            "TrackTypeId": 207,
+            "Position": 2,
+            "FilePosition": 1,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076161,
+            "TrackTypeName": "Surround C/LFE English (US)",
+            "TrackType": {
+              "Name": "Surround C/LFE English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SCN_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 206
+            },
+            "TrackTypeId": 206,
+            "Position": 3,
+            "FilePosition": 3,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076162,
+            "TrackTypeName": "Surround Rear English (US)",
+            "TrackType": {
+              "Name": "Surround Rear English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SRE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 208
+            },
+            "TrackTypeId": 208,
+            "Position": 4,
+            "FilePosition": 5,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076163,
+            "TrackTypeName": "Stereo English (US)",
+            "TrackType": {
+              "Name": "Stereo English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "STE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 195
+            },
+            "TrackTypeId": 195,
+            "Position": 5,
+            "FilePosition": 7,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076164,
+            "TrackTypeName": "Stereo M&E",
+            "TrackType": {
+              "Name": "Stereo M&E",
+              "DefaultPosition": 0,
+              "FileTag": "STE_MNE",
+              "LanguageId": 632,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 399
+            },
+            "TrackTypeId": 399,
+            "Position": 6,
+            "FilePosition": 9,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076165,
+            "TrackTypeName": "Stereo English (US)",
+            "TrackType": {
+              "Name": "Stereo English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "STE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 195
+            },
+            "TrackTypeId": 195,
+            "Position": 7,
+            "FilePosition": 11,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          }
+        ]
+      },
+      {
+        "Id": 1000016249,
+        "FileId": "GMO_00000000121528_01",
+        "Incode": {
+          "Nanos": 3453449972400,
+          "Rate": "P23_976",
+          "Text": "00:57:30:00"
+        },
+        "Outcode": {
+          "Nanos": 13403932101209,
+          "Rate": "P23_976",
+          "Text": "03:43:10:13"
+        },
+        "DeleteMark": 0,
+        "FrameRate": "P23_976",
+        "Encoded": true,
+        "MediaName": "T2_2398_LF_HD_PRORES",
+        "Media": {
+          "Id": 15,
+          "Name": "T2_2398_LF_HD_PRORES",
+          "MediaType": "Generic",
+          "MediaClassName": "Data disk",
+          "FrameRate": "P23_976",
+          "MachineNumber": 0,
+          "AbsolutePath": "/srv/nrtisilon/P23_98/LF/HD/PRORES/",
+          "RelativePath": "/P23_98/LF/HD/PRORES/",
+          "PlayWhileRecord": false,
+          "FilenameFactoryName": "",
+          "Materials": [],
+          "DirectoryNameFactoryName": "MaterialDirectoryNameFactory",
+          "Owner": [],
+          "MetaDataGroup": []
+        },
+        "FileExtension": "mov",
+        "PartIndex": 0,
+        "PartCount": 0,
+        "IngestDate": "2017-06-08T21:37:04.000",
+        "FileBytes": 0,
+        "TrackDefinition": [
+          {
+            "Id": 1000074447,
+            "TrackTypeName": "Video",
+            "TrackType": {
+              "Name": "Video",
+              "DefaultPosition": 0,
+              "FileTag": "vid",
+              "LanguageId": 0,
+              "Ordinality": 0,
+              "ClassId": "VIDEO",
+              "Id": 1
+            },
+            "TrackTypeId": 1,
+            "Position": 1,
+            "FilePosition": 0,
+            "Channels": 1,
+            "Format": "ProRes",
+            "BitRate": 171746004,
+            "Width": 1920,
+            "Height": 1080,
+            "ChromaSubsampling": "4:2:2",
+            "ScanType": "Progressive"
+          },
+          {
+            "Id": 1000074448,
+            "TrackTypeName": "Surround Front English (US)",
+            "TrackType": {
+              "Name": "Surround Front English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SFR_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 207
+            },
+            "TrackTypeId": 207,
+            "Position": 2,
+            "FilePosition": 1,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074449,
+            "TrackTypeName": "Surround C/LFE English (US)",
+            "TrackType": {
+              "Name": "Surround C/LFE English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SCN_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 206
+            },
+            "TrackTypeId": 206,
+            "Position": 3,
+            "FilePosition": 3,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074450,
+            "TrackTypeName": "Surround Rear English (US)",
+            "TrackType": {
+              "Name": "Surround Rear English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SRE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 208
+            },
+            "TrackTypeId": 208,
+            "Position": 4,
+            "FilePosition": 5,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074451,
+            "TrackTypeName": "Stereo English (US)",
+            "TrackType": {
+              "Name": "Stereo English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "STE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 195
+            },
+            "TrackTypeId": 195,
+            "Position": 5,
+            "FilePosition": 7,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074452,
+            "TrackTypeName": "Stereo M&E",
+            "TrackType": {
+              "Name": "Stereo M&E",
+              "DefaultPosition": 0,
+              "FileTag": "STE_MNE",
+              "LanguageId": 632,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 399
+            },
+            "TrackTypeId": 399,
+            "Position": 6,
+            "FilePosition": 9,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074453,
+            "TrackTypeName": "Stereo English (US)",
+            "TrackType": {
+              "Name": "Stereo English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "STE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 195
+            },
+            "TrackTypeId": 195,
+            "Position": 7,
+            "FilePosition": 11,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          }
+        ]
+      },
+      {
+        "Id": 1000016208,
+        "FileId": "GMO_00000000121528_01",
+        "Incode": {
+          "Nanos": 3453449972400,
+          "Rate": "P23_976",
+          "Text": "00:57:30:00"
+        },
+        "Outcode": {
+          "Nanos": 13403932101209,
+          "Rate": "P23_976",
+          "Text": "03:43:10:13"
+        },
+        "DeleteMark": 0,
+        "FrameRate": "P23_976",
+        "Encoded": true,
+        "MediaName": "Browse_P23_976",
+        "Media": {
+          "Id": 75,
+          "Name": "Browse_P23_976",
+          "MediaType": "Generic",
+          "MediaClassName": "Data disk",
+          "FrameRate": "P23_976",
+          "MachineNumber": 0,
+          "AbsolutePath": "/srv/browse/",
+          "RelativePath": "/srv/browse/",
+          "PlayWhileRecord": false,
+          "FilenameFactoryName": "",
+          "Materials": [],
+          "DirectoryNameFactoryName": "FlatListDirectoryNameFactory",
+          "Owner": [],
+          "MetaDataGroup": []
+        },
+        "FileExtension": "mov",
+        "PartIndex": 0,
+        "PartCount": 0,
+        "IngestDate": "2017-06-05T23:53:38.000",
+        "FileBytes": 0,
+        "TrackDefinition": [
+          {
+            "Id": 1000074389,
+            "TrackTypeName": "Video",
+            "TrackType": {
+              "Name": "Video",
+              "DefaultPosition": 0,
+              "FileTag": "vid",
+              "LanguageId": 0,
+              "Ordinality": 0,
+              "ClassId": "VIDEO",
+              "Id": 1
+            },
+            "TrackTypeId": 1,
+            "Position": 1,
+            "FilePosition": 0,
+            "Channels": 1,
+            "Format": "ProRes",
+            "BitRate": 171746004,
+            "Width": 1920,
+            "Height": 1080,
+            "ChromaSubsampling": "4:2:2",
+            "ScanType": "Progressive"
+          },
+          {
+            "Id": 1000074390,
+            "TrackTypeName": "Surround Front English (US)",
+            "TrackType": {
+              "Name": "Surround Front English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SFR_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 207
+            },
+            "TrackTypeId": 207,
+            "Position": 2,
+            "FilePosition": 1,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074391,
+            "TrackTypeName": "Surround C/LFE English (US)",
+            "TrackType": {
+              "Name": "Surround C/LFE English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SCN_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 206
+            },
+            "TrackTypeId": 206,
+            "Position": 3,
+            "FilePosition": 3,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074392,
+            "TrackTypeName": "Surround Rear English (US)",
+            "TrackType": {
+              "Name": "Surround Rear English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SRE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 208
+            },
+            "TrackTypeId": 208,
+            "Position": 4,
+            "FilePosition": 5,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074393,
+            "TrackTypeName": "Stereo English (US)",
+            "TrackType": {
+              "Name": "Stereo English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "STE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 195
+            },
+            "TrackTypeId": 195,
+            "Position": 5,
+            "FilePosition": 7,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074394,
+            "TrackTypeName": "Stereo M&E",
+            "TrackType": {
+              "Name": "Stereo M&E",
+              "DefaultPosition": 0,
+              "FileTag": "STE_MNE",
+              "LanguageId": 632,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 399
+            },
+            "TrackTypeId": 399,
+            "Position": 6,
+            "FilePosition": 9,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074395,
+            "TrackTypeName": "Stereo English (US)",
+            "TrackType": {
+              "Name": "Stereo English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "STE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 195
+            },
+            "TrackTypeId": 195,
+            "Position": 7,
+            "FilePosition": 11,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 1152000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000074463,
+            "TrackTypeName": "Audio Description English (US)",
+            "TrackType": {
+              "Name": "Audio Description English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "AUD_EN-US",
+              "LanguageId": 625,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 196
+            },
+            "TrackTypeId": 196,
+            "Position": 8,
+            "FilePosition": 13,
+            "Channels": 2
+          }
+        ]
+      },
+      {
+        "Id": 1000016269,
+        "FileId": "GMO_00000000121528_01",
+        "DeleteMark": 0,
+        "FrameRate": "P23_976",
+        "Encoded": true,
+        "MediaName": "Sub_SCC",
+        "Media": {
+          "Id": 82,
+          "Name": "Sub_SCC",
+          "MediaType": "Generic",
+          "MediaClassName": "Data disk",
+          "FrameRate": "NDF25",
+          "MachineNumber": 0,
+          "AbsolutePath": "/srv/storage/Subs/SCC/",
+          "RelativePath": "/srv/storage/Subs/SCC/",
+          "PlayWhileRecord": false,
+          "FilenameFactoryName": "",
+          "Materials": [],
+          "DirectoryNameFactoryName": "MaterialDirectoryNameFactory",
+          "Owner": [],
+          "MetaDataGroup": []
+        },
+        "FileExtension": "scc",
+        "IngestDate": "2017-06-12T21:52:55.000",
+        "FileBytes": 0,
+        "TrackDefinition": [
+          {
+            "Id": 1000074464,
+            "TrackTypeName": "Closed Caption English (US)",
+            "TrackType": {
+              "Name": "Closed Caption English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "CCA_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "SUBTITLE",
+              "Id": 364
+            },
+            "TrackTypeId": 364,
+            "Position": 0,
+            "FilePosition": 1,
+            "FileId": "GMO_00000000121528_01-CCA_EN-US.scc",
+            "Channels": 0
+          }
+        ]
+      },
+      {
+        "Id": 1000017388,
+        "FileId": "GMO_00000000121528_01",
+        "Incode": {
+          "Nanos": 3453449972400,
+          "Rate": "P23_976",
+          "Text": "00:57:30:00"
+        },
+        "Outcode": {
+          "Nanos": 13403932101209,
+          "Rate": "P23_976",
+          "Text": "03:43:10:13"
+        },
+        "DeleteMark": 0,
+        "FrameRate": "P23_976",
+        "Encoded": true,
+        "MediaName": "T2_2398_LF_HD_WAV",
+        "Media": {
+          "Id": 122,
+          "Name": "T2_2398_LF_HD_WAV",
+          "MediaType": "Generic",
+          "MediaClassName": "Data disk",
+          "FrameRate": "P23_976",
+          "MachineNumber": 0,
+          "AbsolutePath": "/srv/nrtisilon/P23_98/LF/HD/WAV/",
+          "RelativePath": "/srv/nrtisilon/P23_98/LF/HD/WAV/",
+          "PlayWhileRecord": false,
+          "FilenameFactoryName": "",
+          "Materials": [],
+          "DirectoryNameFactoryName": "MaterialDirectoryNameFactory",
+          "Owner": [],
+          "MetaDataGroup": []
+        },
+        "FileExtension": "wav",
+        "PartIndex": 0,
+        "PartCount": 0,
+        "IngestDate": "2017-11-10T21:33:44.000",
+        "FileBytes": 0,
+        "TrackDefinition": [
+          {
+            "Id": 1000076716,
+            "TrackTypeName": "Stereo English (US)",
+            "TrackType": {
+              "Name": "Stereo English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "STE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 195
+            },
+            "TrackTypeId": 195,
+            "Position": 0,
+            "FilePosition": 1,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 2304000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076712,
+            "TrackTypeName": "Surround C/LFE English (US)",
+            "TrackType": {
+              "Name": "Surround C/LFE English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SCN_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 206
+            },
+            "TrackTypeId": 206,
+            "Position": 0,
+            "FilePosition": 1,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 2304000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076713,
+            "TrackTypeName": "Surround Rear English (US)",
+            "TrackType": {
+              "Name": "Surround Rear English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SRE_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 208
+            },
+            "TrackTypeId": 208,
+            "Position": 0,
+            "FilePosition": 1,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 2304000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076714,
+            "TrackTypeName": "MOS",
+            "TrackType": {
+              "Name": "MOS",
+              "DefaultPosition": 0,
+              "FileTag": "MOS",
+              "LanguageId": 0,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 419
+            },
+            "TrackTypeId": 419,
+            "Position": 0,
+            "FilePosition": 1,
+            "Channels": 2
+          },
+          {
+            "Id": 1000076715,
+            "TrackTypeName": "Stereo M&E",
+            "TrackType": {
+              "Name": "Stereo M&E",
+              "DefaultPosition": 0,
+              "FileTag": "STE_MNE",
+              "LanguageId": 632,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 399
+            },
+            "TrackTypeId": 399,
+            "Position": 0,
+            "FilePosition": 1,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 2304000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076711,
+            "TrackTypeName": "Surround Front English (US)",
+            "TrackType": {
+              "Name": "Surround Front English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "SFR_EN-US",
+              "LanguageId": 487,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 207
+            },
+            "TrackTypeId": 207,
+            "Position": 0,
+            "FilePosition": 1,
+            "Channels": 2,
+            "Format": "PCM",
+            "BitRate": 2304000,
+            "SamplingRate": 48000,
+            "BitDepth": 24
+          },
+          {
+            "Id": 1000076710,
+            "TrackTypeName": "Audio Description English (US)",
+            "TrackType": {
+              "Name": "Audio Description English (US)",
+              "DefaultPosition": 0,
+              "FileTag": "AUD_EN-US",
+              "LanguageId": 625,
+              "Ordinality": 0,
+              "ClassId": "AUDIO",
+              "Id": 196
+            },
+            "TrackTypeId": 196,
+            "Position": 0,
+            "FilePosition": 1,
+            "Channels": 2
+          }
+        ]
+      }
+    ],
+    "SegmentList": {
+      "Segment": []
+    },
+    "Marker": [],
+    "TagList": {
+      "Tag": [
+        {
+          "Id": 788,
+          "TagType": "Compass: US Rating",
+          "Value": "NULL",
+          "Ordinality": 1,
+          "Type": "set"
+        },
+        {
+          "Id": 153,
+          "TagType": "Drop Folder",
+          "Value": "BroadcastPriority",
+          "Ordinality": 1,
+          "Type": "set"
+        },
+        {
+          "Id": 2236,
+          "TagType": "GTM Origin Codes",
+          "Value": "025 - Focus Features",
+          "Ordinality": 2,
+          "Type": "ordinal expanding set"
+        },
+        {
+          "Id": 2208,
+          "TagType": "GTM Origin Codes",
+          "Value": "293 - Paramount Int'l Sub-Distribution",
+          "Ordinality": 2,
+          "Type": "ordinal expanding set"
+        },
+        {
+          "Id": 2355,
+          "TagType": "GTM Origin Codes",
+          "Value": "048 - Third Party TV Distribution",
+          "Ordinality": 3,
+          "Type": "ordinal expanding set"
+        },
+        {
+          "Id": 2210,
+          "TagType": "GTM Origin Codes",
+          "Value": "194 - USHE CA-Elevation Pictures",
+          "Ordinality": 3,
+          "Type": "ordinal expanding set"
+        },
+        {
+          "Id": 57,
+          "TagType": "Shell Creator",
+          "Value": "Translation Layer",
+          "Ordinality": 1,
+          "Type": "set"
+        },
+        {
+          "Id": 1326,
+          "TagType": "Shell Creator",
+          "Value": "GMO Mediator",
+          "Ordinality": 2,
+          "Type": "set"
+        },
+        {
+          "Id": 732,
+          "TagType": "US Rating",
+          "Value": "NULL",
+          "Ordinality": 1,
+          "Type": "set"
+        }
+      ]
+    },
+    "ShortTextList": {
+      "ShortText": [
+        {
+          "Id": 1621531,
+          "Key": 1621531,
+          "ShortTextType": "Asset Creation Date",
+          "Value": "2017-06-05T23:24:03",
+          "Ordinality": 1,
+          "Type": "date"
+        },
+        {
+          "Id": 1621530,
+          "Key": 1621530,
+          "ShortTextType": "Audio Profile",
+          "Value": "12CH Standard",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621556,
+          "Key": 1621556,
+          "ShortTextType": "Compass Material ID",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621566,
+          "Key": 1621566,
+          "ShortTextType": "Compass Original Air Date",
+          "Ordinality": 1,
+          "Type": "date"
+        },
+        {
+          "Id": 1621534,
+          "Key": 1621534,
+          "ShortTextType": "Compass Title",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621569,
+          "Key": 1621569,
+          "ShortTextType": "Compass Title Version #",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621585,
+          "Key": 1621585,
+          "ShortTextType": "Compass: Material ID",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621574,
+          "Key": 1621574,
+          "ShortTextType": "Compass: Original Air Date",
+          "Ordinality": 1,
+          "Type": "date"
+        },
+        {
+          "Id": 1621583,
+          "Key": 1621583,
+          "ShortTextType": "Compass: Title",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621586,
+          "Key": 1621586,
+          "ShortTextType": "Compass: Title Version #",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1623613,
+          "Key": 1623613,
+          "ShortTextType": "Contains Black",
+          "Value": "false",
+          "Ordinality": 1,
+          "Type": "boolean"
+        },
+        {
+          "Id": 1623615,
+          "Key": 1623615,
+          "ShortTextType": "Content Transfer Workflow State",
+          "Value": "Transfer Failed",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621592,
+          "Key": 1621592,
+          "ShortTextType": "Duplicate Audios",
+          "Value": "false",
+          "Ordinality": 1,
+          "Type": "boolean"
+        },
+        {
+          "Id": 1621554,
+          "Key": 1621554,
+          "ShortTextType": "EIDR",
+          "Value": "10.5240/AD20-71B9-F86D-D034-5A9A-I",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621580,
+          "Key": 1621580,
+          "ShortTextType": "EIDRV",
+          "Value": "10.5240/929F-E9CF-DA19-CE23-C0B4-B",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 1621555,
+          "Key": 1621555,
+          "ShortTextType": "GCO: CTV Short Series Name",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621579,
+          "Key": 1621579,
+          "ShortTextType": "GTM Original Air Date",
+          "Ordinality": 1,
+          "Type": "date"
+        },
+        {
+          "Id": 1621543,
+          "Key": 1621543,
+          "ShortTextType": "GTM Original Version",
+          "Value": "true",
+          "Ordinality": 1,
+          "Type": "boolean"
+        },
+        {
+          "Id": 1621552,
+          "Key": 1621552,
+          "ShortTextType": "GTM Title Version",
+          "Value": "Theatrical (Original Version)",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621587,
+          "Key": 1621587,
+          "ShortTextType": "GTM: EIDR",
+          "Value": "10.5240/AD20-71B9-F86D-D034-5A9A-I",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621560,
+          "Key": 1621560,
+          "ShortTextType": "GTM: EIDRV",
+          "Value": "10.5240/929F-E9CF-DA19-CE23-C0B4-B",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621561,
+          "Key": 1621561,
+          "ShortTextType": "GTM: Original Air Date",
+          "Ordinality": 1,
+          "Type": "date"
+        },
+        {
+          "Id": 1621591,
+          "Key": 1621591,
+          "ShortTextType": "GTM: Original Version",
+          "Value": "true",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621532,
+          "Key": 1621532,
+          "ShortTextType": "GTM: Title Version",
+          "Value": "Theatrical (Original Version)",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621557,
+          "Key": 1621557,
+          "ShortTextType": "GTM: TVD Production #",
+          "Value": "04108",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 3173198,
+          "Key": 3173198,
+          "ShortTextType": "Hayu Cross Ref #",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621529,
+          "Key": 1621529,
+          "ShortTextType": "Original Aspect Ratio",
+          "Value": "True",
+          "Ordinality": 1,
+          "Type": "boolean"
+        },
+        {
+          "Id": 1621526,
+          "Key": 1621526,
+          "ShortTextType": "Original File Name",
+          "Value": "04108_133SM_TXM_EN-US.mov",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 1621528,
+          "Key": 1621528,
+          "ShortTextType": "Original Frame Rate",
+          "Value": "True",
+          "Ordinality": 1,
+          "Type": "boolean"
+        },
+        {
+          "Id": 1621558,
+          "Key": 1621558,
+          "ShortTextType": "SMAT: Actor #01 Character Name (ENG)",
+          "Value": "Star",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621545,
+          "Key": 1621545,
+          "ShortTextType": "SMAT: Actor #01 Display (ENG)",
+          "Value": "Sasha Lane",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621533,
+          "Key": 1621533,
+          "ShortTextType": "SMAT: Actor #02 Character Name (ENG)",
+          "Value": "Jake",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621550,
+          "Key": 1621550,
+          "ShortTextType": "SMAT: Actor #02 Display (ENG)",
+          "Value": "Shia LaBeouf",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621589,
+          "Key": 1621589,
+          "ShortTextType": "SMAT: Actor #03 Character Name (ENG)",
+          "Value": "Krystal",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621588,
+          "Key": 1621588,
+          "ShortTextType": "SMAT: Actor #03 Display (ENG)",
+          "Value": "Riley Keough",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621536,
+          "Key": 1621536,
+          "ShortTextType": "SMAT: Copyright - no symbol",
+          "Value": "2016 Universal Studios.. All Rights Reserved.",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 4914312,
+          "Key": 4914312,
+          "ShortTextType": "SMAT: Copyright - no symbol (ENG|US)",
+          "Value": "2016 Universal Studios.. All Rights Reserved.",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 4914306,
+          "Key": 4914306,
+          "ShortTextType": "SMAT: Copyright - no symbol (ENG|WW)",
+          "Value": "2016 Universal Studios.. All Rights Reserved.",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 1621576,
+          "Key": 1621576,
+          "ShortTextType": "SMAT: Copyright - symbol",
+          "Value": "© 2017 Universal Studios. All Rights Reserved.",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 4914304,
+          "Key": 4914304,
+          "ShortTextType": "SMAT: Copyright - symbol (ENG|US)",
+          "Value": "? 2017 Universal Studios. All Rights Reserved.",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 5232300,
+          "Key": 5232300,
+          "ShortTextType": "SMAT: Copyright - symbol (ENG|WW)",
+          "Value": "? 2017 Universal Studios. All Rights Reserved.",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 1621570,
+          "Key": 1621570,
+          "ShortTextType": "SMAT: Copyright Year",
+          "Value": "2016",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621541,
+          "Key": 1621541,
+          "ShortTextType": "SMAT: Crew Member #01 - Credit (ENG)",
+          "Value": "Director",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621547,
+          "Key": 1621547,
+          "ShortTextType": "SMAT: Crew Member #01 Display (ENG)",
+          "Value": "Andrea Arnold",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621568,
+          "Key": 1621568,
+          "ShortTextType": "SMAT: Crew Member #02 - Credit (ENG)",
+          "Value": "Producer",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621564,
+          "Key": 1621564,
+          "ShortTextType": "SMAT: Crew Member #02 Display (ENG)",
+          "Value": "Thomas Benski",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621565,
+          "Key": 1621565,
+          "ShortTextType": "SMAT: Crew Member #03 - Credit (ENG)",
+          "Value": "Producer",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621539,
+          "Key": 1621539,
+          "ShortTextType": "SMAT: Crew Member #03 Display (ENG)",
+          "Value": "Lars Knudsen",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621537,
+          "Key": 1621537,
+          "ShortTextType": "SMAT: Crew Member #04 - Credit (ENG)",
+          "Value": "Producer",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621551,
+          "Key": 1621551,
+          "ShortTextType": "SMAT: Crew Member #04 Display (ENG)",
+          "Value": "Lucas Ochoa",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621542,
+          "Key": 1621542,
+          "ShortTextType": "SMAT: Crew Member #05 - Credit (ENG)",
+          "Value": "Producer",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621559,
+          "Key": 1621559,
+          "ShortTextType": "SMAT: Crew Member #05 Display (ENG)",
+          "Value": "Pouya Shahbazian",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621538,
+          "Key": 1621538,
+          "ShortTextType": "SMAT: Crew Member #06 - Credit (ENG)",
+          "Value": "Producer",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621584,
+          "Key": 1621584,
+          "ShortTextType": "SMAT: Crew Member #06 Display (ENG)",
+          "Value": "Jay Van Hoy",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621590,
+          "Key": 1621590,
+          "ShortTextType": "SMAT: Display Title (ENG|AU)",
+          "Value": "American Honey",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621540,
+          "Key": 1621540,
+          "ShortTextType": "SMAT: Display Title (ENG|UK)",
+          "Value": "American Honey",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621544,
+          "Key": 1621544,
+          "ShortTextType": "SMAT: Display Title (ENG|US)",
+          "Value": "American Honey",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621535,
+          "Key": 1621535,
+          "ShortTextType": "SMAT: IMDB ID",
+          "Value": "tt3721936",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621563,
+          "Key": 1621563,
+          "ShortTextType": "SMAT: iTunes Genre 1 - Film",
+          "Value": "DRAMA-00",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621582,
+          "Key": 1621582,
+          "ShortTextType": "SMAT: Preview Start Time",
+          "Value": "200",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621562,
+          "Key": 1621562,
+          "ShortTextType": "SMAT: Provider Name",
+          "Value": "NBCUniversal",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621572,
+          "Key": 1621572,
+          "ShortTextType": "SMAT: Rating - DVD (NA|AU)",
+          "Value": "MA15+",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 4914307,
+          "Key": 4914307,
+          "ShortTextType": "SMAT: Rating - DVD (NA|DE)",
+          "Value": "12",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 1621553,
+          "Key": 1621553,
+          "ShortTextType": "SMAT: Rating - DVD (NA|UK)",
+          "Value": "15",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621581,
+          "Key": 1621581,
+          "ShortTextType": "SMAT: Rating - Theatrical (NA|AU)",
+          "Value": "MA15+",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 4914305,
+          "Key": 4914305,
+          "ShortTextType": "SMAT: Rating - Theatrical (NA|DE)",
+          "Value": "12",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 1621549,
+          "Key": 1621549,
+          "ShortTextType": "SMAT: Rating - Theatrical (NA|UK)",
+          "Value": "15",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621578,
+          "Key": 1621578,
+          "ShortTextType": "SMAT: Release Year",
+          "Value": "2016",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621571,
+          "Key": 1621571,
+          "ShortTextType": "SMAT: Run Time - Hour Minutes",
+          "Value": "1 Hour 43 Minutes",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621548,
+          "Key": 1621548,
+          "ShortTextType": "SMAT: Sales Start Date (NA|US)",
+          "Value": "2016-10-01T12:00:00",
+          "Ordinality": 1,
+          "Type": "date"
+        },
+        {
+          "Id": 1621546,
+          "Key": 1621546,
+          "ShortTextType": "SMAT: Street Date - DVD (NA|AU)",
+          "Value": "2017-02-22T12:00:00",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 4914309,
+          "Key": 4914309,
+          "ShortTextType": "SMAT: Street Date - DVD (NA|DE)",
+          "Value": "2017-02-23T12:00:00",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 4914310,
+          "Key": 4914310,
+          "ShortTextType": "SMAT: Street Date - DVD (NA|FR)",
+          "Value": "2017-06-13T12:00:00",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 1624745,
+          "Key": 1624745,
+          "ShortTextType": "SMAT: Street Date - DVD (NA|UK)",
+          "Value": "2017-02-20T12:00:00",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621577,
+          "Key": 1621577,
+          "ShortTextType": "SMAT: Studio Name/Production Company",
+          "Value": "Universal Studios.",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621575,
+          "Key": 1621575,
+          "ShortTextType": "SMAT: Theatrical Rel Dt (NA|AU)",
+          "Value": "2016-11-03T12:00:00",
+          "Ordinality": 1,
+          "Type": "date"
+        },
+        {
+          "Id": 4914311,
+          "Key": 4914311,
+          "ShortTextType": "SMAT: Theatrical Rel Dt (NA|DE)",
+          "Value": "2016-10-13T12:00:00",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 4914308,
+          "Key": 4914308,
+          "ShortTextType": "SMAT: Theatrical Rel Dt (NA|FR)",
+          "Value": "2017-03-09T12:00:00",
+          "Ordinality": 1,
+          "Type": "identifier"
+        },
+        {
+          "Id": 1624744,
+          "Key": 1624744,
+          "ShortTextType": "SMAT: Theatrical Rel Dt (NA|UK)",
+          "Value": "2016-10-14T12:00:00",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1621567,
+          "Key": 1621567,
+          "ShortTextType": "SMAT: Theatrical Rel Dt (NA|US)",
+          "Value": "2016-09-30T12:00:00",
+          "Ordinality": 1,
+          "Type": "date"
+        },
+        {
+          "Id": 1621573,
+          "Key": 1621573,
+          "ShortTextType": "SMAT: Version Type",
+          "Value": "Theatrical",
+          "Ordinality": 1,
+          "Type": "text"
+        },
+        {
+          "Id": 1623614,
+          "Key": 1623614,
+          "ShortTextType": "Telecine",
+          "Value": "false",
+          "Ordinality": 1,
+          "Type": "boolean"
+        },
+        {
+          "Id": 1621527,
+          "Key": 1621527,
+          "ShortTextType": "Textless Complete",
+          "Value": "False",
+          "Ordinality": 1,
+          "Type": "boolean"
+        },
+        {
+          "Id": 1621525,
+          "Key": 1621525,
+          "ShortTextType": "TVD Production #",
+          "Value": "04108",
+          "Ordinality": 1,
+          "Type": "identifier"
+        }
+      ]
+    },
+    "MetaDataGroup": [],
+    "MaterialTypeNameI18n": "material_type.feature",
+    "TransformationId": 1040
+  }
+}r

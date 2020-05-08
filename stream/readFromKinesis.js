@@ -1,5 +1,5 @@
 // To run:
-// AWS_PROFILE=saml node readFromKinesis.js
+// AWS_PROFILE=nbc node readFromKinesis.js
 
 const AWS = require("aws-sdk");
 AWS.config.update({ region: process.env.AWS_REGION || "us-east-1" });

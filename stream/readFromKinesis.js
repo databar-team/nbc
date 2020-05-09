@@ -1,8 +1,8 @@
 // To run:
 // AWS_PROFILE=saml node readFromKinesis.js
 
-// const AWS = require("aws-sdk");
-const AWS = require('/usr/local/lib/node_modules/aws-sdk');
+const AWS = require("aws-sdk");
+// const AWS = require('/usr/local/lib/node_modules/aws-sdk');
 
 AWS.config.update({ region: process.env.AWS_REGION || "us-east-1" });
 const kinesis = new AWS.Kinesis();

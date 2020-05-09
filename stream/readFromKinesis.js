@@ -1,5 +1,5 @@
-// To run:
-AWS_PROFILE=nbc node readFromKinesis.js
+// To run (use your profile - 'nbc'):
+// AWS_PROFILE=nbc node readFromKinesis.js
 
 const AWS = require("aws-sdk");
 // const AWS = require('/usr/local/lib/node_modules/aws-sdk');

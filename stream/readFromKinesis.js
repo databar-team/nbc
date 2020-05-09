@@ -1,5 +1,5 @@
 // To run:
-// AWS_PROFILE=saml node readFromKinesis.js
+AWS_PROFILE=nbc node readFromKinesis.js
 
 const AWS = require("aws-sdk");
 // const AWS = require('/usr/local/lib/node_modules/aws-sdk');

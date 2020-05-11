@@ -1,78 +1,66 @@
-// To run (use your profile - 'nbc'):
-//AWS_PROFILE = nbc node readFromKinesis.js
-const AWS = require("aws-sdk");
-const fs = require('fs')
-//const AWS = require('/usr/local/lib/node_modules/aws-sdk');
+// To run (use command AWS_PROFILE=nbc node readFromKinesis.js):
 
-AWS.config.update({ region: process.env.AWS_REGION || "us-east-1" });
-console.log("Start")
-const kinesis = new AWS.Kinesis();
-function catcher(err) {
-  console.log("ERRROR")
-  console.dir(err)
+const AWS = require ('aws-sdk')  //aws library
+const fs = require('fs')      
+
+AWS.config.update({region:process.env.AWS_REGION || "us-east-1"})  //Set region
+
+const kinesis = new AWS.Kinesis() //Make new constructor for kinesis
+
+function catcher(err){
+    console.log("ERROR")
+    console.dir(err)
 }
+
 const allRecords = [];
 const iteratedShards = [];
 
-function getRecords(iter) {
-  if(iter && !(iter in iteratedShards)) {
-    console.log("GetRecords")
-    iteratedShards.push(iter);
-    return kinesis.getRecords({
-      ShardIterator: iter,
-    }).promise().then(records => {
-      records.Records.forEach(record => {
-        console.log("buffer")
-        const data = Buffer.from(record.Data, "base64").toString();
-        try {
-          console.log("try")
-          const r = JSON.parse(data);
-          allRecords.push(r);
-          console.log("\n==========================================\n");
-          console.log(JSON.stringify(r, null, 2));
-          fs.appendFile('status.txt', JSON.stringify(r, null, 2), (err) =>{
-            if(err) throw err;
-             console.log('File has been written successfully')
-          })
-          
-        } catch(e) {
-          console.log("Failed to parse: ", data);
-          fs.appendFile('status.txt', data, (err) =>{
-            if(err) throw err;
-            console.log('Error has been made')
-          })
-        }
-      });
-      if(records.MillisBehindLatest > 0) {
-        return getRecords(records.NextShardIterator)
-      }
-    });
-  }
+function getRecords(iter){
+    if(iter && !(iter in iteratedShards)){
+        iteratedShards.push(iter)
+        return kinesis.getRecords({
+            ShardIterator: iter,
+        }).promise().then(records =>{
+            records.Records.forEach(record => {
+                const data = Buffer.from(record.Data, "base64").toString()
+                console.log(data)
+                try{
+                    console.log("test")
+                    const r = JSON.parse(data)
+                    allRecords.push(r)
+                    fs.appendFile("nekifajl.txt", JSON.stringify(r,null,2), (err)=>{
+                        if(err) throw err
+                    })
+                }catch(e){
+                    fs.appendFile("nekifajl.txt", JSON.stringify(data), (err)=>{
+                        if(err) throw err
+                    })
+                }
+            });
+            if(records.MillisBehindLatest > 0) {
+                return getRecords(records.NextShardIterator)
+            }
+        })
+        
+    }
 }
 
-// const StreamName = "cp-pr-44-bf5c7-validation";
-const StreamName = "cp-audio-status-dev";
+const StreamName = "Foo";  //Try diferent stream names for diferent results
 
 
 async function run() {
-  console.log('run')
   return await kinesis.describeStream({
     StreamName
   }).promise().then(async shards => {
     shards.StreamDescription.Shards.forEach(async shard => {
-      const seq = shard.SequenceNumberRange.StartingSequenceNumber;
-      // console.dir(shard)
       return await kinesis.getShardIterator({
         StreamName,
         ShardId: shard.ShardId,
-        // ShardIteratorType: "LATEST",
-        // ShardIteratorType: "TRIM_HORIZON",
         ShardIteratorType: "AT_TIMESTAMP",
         Timestamp: 1587329400
-        // ShardIteratorType: "AFTER_SEQUENCE_NUMBER",
-        // StartingSequenceNumber: seq
       }).promise().then(iter => getRecords(iter.ShardIterator)).catch(catcher);
     });
   }).catch(catcher);
+  
 }
 run();

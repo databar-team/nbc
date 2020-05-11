@@ -23,9 +23,7 @@ function getRecords(iter){
         }).promise().then(records =>{
             records.Records.forEach(record => {
                 const data = Buffer.from(record.Data, "base64").toString()
-                console.log(data)
                 try{
-                    console.log("test")
                     const r = JSON.parse(data)
                     allRecords.push(r)
                     fs.appendFile("nekifajl.txt", JSON.stringify(r,null,2), (err)=>{
@@ -45,7 +43,7 @@ function getRecords(iter){
     }
 }
 
-const StreamName = "Foo";  //Try diferent stream names for diferent results
+const StreamName = "cp-status-pr-44-bf5c7";  //Try diferent stream names for diferent results
 
 
 async function run() {

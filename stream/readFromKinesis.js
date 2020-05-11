@@ -1,10 +1,11 @@
 // To run (use your profile - 'nbc'):
-// AWS_PROFILE=nbc node readFromKinesis.js
-
+//AWS_PROFILE = nbc node readFromKinesis.js
 const AWS = require("aws-sdk");
-// const AWS = require('/usr/local/lib/node_modules/aws-sdk');
+const fs = require('fs')
+//const AWS = require('/usr/local/lib/node_modules/aws-sdk');
 
 AWS.config.update({ region: process.env.AWS_REGION || "us-east-1" });
+console.log("Start")
 const kinesis = new AWS.Kinesis();
 function catcher(err) {
   console.log("ERRROR")
@@ -12,24 +13,28 @@ function catcher(err) {
 }
 const allRecords = [];
 const iteratedShards = [];
-const fs = require('fs')
+
 function getRecords(iter) {
   if(iter && !(iter in iteratedShards)) {
+    console.log("GetRecords")
     iteratedShards.push(iter);
     return kinesis.getRecords({
       ShardIterator: iter,
     }).promise().then(records => {
       records.Records.forEach(record => {
+        console.log("buffer")
         const data = Buffer.from(record.Data, "base64").toString();
         try {
+          console.log("try")
           const r = JSON.parse(data);
           allRecords.push(r);
           console.log("\n==========================================\n");
           console.log(JSON.stringify(r, null, 2));
           fs.appendFile('status.txt', JSON.stringify(r, null, 2), (err) =>{
             if(err) throw err;
-            // console.log('File has been written successfully')
+             console.log('File has been written successfully')
           })
+          
         } catch(e) {
           console.log("Failed to parse: ", data);
           fs.appendFile('status.txt', data, (err) =>{
@@ -46,10 +51,11 @@ function getRecords(iter) {
 }
 
 // const StreamName = "cp-pr-44-bf5c7-validation";
-const StreamName = "cp-status-pr-44-bf5c7";
+const StreamName = "cp-audio-status-dev";
 
 
 async function run() {
+  console.log('run')
   return await kinesis.describeStream({
     StreamName
   }).promise().then(async shards => {

@@ -1,6 +1,7 @@
 const { readFromBucketUsingURI, writeToBucketUsingURI } = require('./s3');
 const { groupBy, uniqBy, flatten } = require('lodash');
 const { findPreferredTracks } = require('./findPreferredTracks');
+const log = require("../logger");
 require("promise.allsettled").shim();
 
 const isTrackReady = (material, isVideo, tr, tracks, trackErrors) => {
@@ -56,11 +57,11 @@ const validateWorkOrderAndMaterial = (wo, material, consolidated) => {
       throw new Error('WorkOrder: Embedded language requirements are not found in the workorder for the MaterialType specified in material');
     } else {
       audioAndCaptionPref.forEach((aud) => {
-        aud.audioEmbeddedTracks.forEach((tr, i) => {
+        aud.embeddedAudioTracks.forEach((tr, i) => {
           if (tr.trackTypeId) {
             consolidated.trackTypeIds.audioEmbTracks.push(tr);
           } else {
-            throw new Error(`WorkOrder: TrackTypeId "${tr.trackTypeId}" in audioEmbeddedTracks at index ${i} is invalid`);
+            throw new Error(`WorkOrder: TrackTypeId "${tr.trackTypeId}" in embeddedAudioTracks at index ${i} is invalid`);
           }
         });
         aud.embeddedCaptionTracks.forEach((tr, i) => {
@@ -146,31 +147,39 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
     jobId: event.jobId
   };
   log.info(`Starting validation of work order`, logContext);
+  // Check that the embeddedAudioTracks exist and are not empty
+	try {
+		const embeddedAudioTracksPackage = wo.profile.packages.find(pack => pack.embeddedAudioTracks);
+		if (!embeddedAudioTracksPackage || embeddedAudioTracksPackage.length === 0) {
+			throw new Error('Embedded audio tracks are empty or are missing from the workOrder');
+			}
+	} catch (e) {
+      log.error(`Issue with Embedded audio tracks`,logContext);
+	}
+	// Check that the embeddedCaptionTracks exist and are not empty
+	try {
+		const embeddedCaptionTracksPackage = wo.profile.packages.find(pack => pack.embeddedCaptionTracks);
+		if (!embeddedCaptionTracksPackage || embeddedCaptionTracksPackage.length === 0) {
+			throw new Error('Embedded caption tracks are empty or are missing from the workOrder');
+			}
+	} catch (e) {
+      log.error(`Issue with Embedded caption tracks`,logContext);
+	}
   const validatingStatus = "Validating Material.";
   await statusSender.send("Running", {
-    requester: "WorkOrderBacklog",
-    cpId,
-    jobType: "cp-Validation",
-    jobStatus: statusMap[jobStatus.toLowerCase()],
-    percentComplete: percent || null,
-    timestamp: Date.now(),
     workOrderId: workOrderId,
     jobId: event.jobId,
-    statusMessage: validatingStatus
+    statusMessage: validatingStatus,
+    jobType: "cp-Validation"
   });
   log.info(validatingStatus, logContext);
   let material;
   try {
     material = await readFromBucketUsingURI(event.rawMaterialMetadataInputFile);
   } catch (e) {
-    const statusMessage = "materialsValid";
+    // const statusMessage = "Material Validation Failed for ${material.Material.MatId}";
+    const statusMessage = `Material Validation Failed for ${material.Material.MatId}`
     await statusSender.send("Error", {
-      requester: "WorkOrderBacklog",
-    cpId,
-    jobType: "cp-Validation",
-    jobStatus: statusMap[jobStatus.toLowerCase()],
-    percentComplete: percent || null,
-    timestamp: Date.now(),
       workOrderId: workOrderId,
       jobId: event.jobId,
       statusMessage,
@@ -179,7 +188,8 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
           errorCode: 1,
           errorMessage: `Could not find material metadata at ${event.rawMaterialMetadataInputFile}`
         }
-      ]
+      ],
+      jobType: "cp-Validation"
     });
     log.error(statusMessage, logContext);
     throw e;
@@ -220,15 +230,10 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
 
         const s3Promise = writeToBucketUsingURI(event.materialMetadataOutputFile, material).then(() =>
           statusSender.send("Done", {
-            requester: "WorkOrderBacklog",
-    cpId,
-    jobType: "cp-Validation",
-    jobStatus: statusMap[jobStatus.toLowerCase()],
-    percentComplete: percent || null,
-    timestamp: Date.now(),
             workOrderId: workOrderId,
             jobId: event.jobId,
-            statusMessage: `Material ${material.Material.MatId} Successfully Validated & Saved at ${event.materialMetadataOutputFile}`
+            statusMessage: `Material validation complete ${material.Material.MatId} `,
+            jobType: "cp-Validation"
           })
         );
         promises.push(s3Promise);
@@ -238,20 +243,18 @@ const validateAndSaveMaterial = async(log, statusSender, event) => {
         errorCode: 2,
         errorMessage: e.message
       };
-      const statusMessage = e.message.includes("Waiting for Mediator to finish transferring") ? "Pending Transfer." : "materialsValid";      
+      const statusMessage = e.message.includes("Waiting for Mediator to finish transferring")
+        ? "Pending Transfer."
+        : `Material Validation Failed for ${material.Material.MatId}`;
+
       log.error(statusMessage, logContext);
       promises.push(
         statusSender.send("Error", {
-          requester: "WorkOrderBacklog",
-    cpId,
-    jobType: "cp-Validation",
-    jobStatus: statusMap[jobStatus.toLowerCase()],
-    percentComplete: percent || null,
-    timestamp: Date.now(),
           workOrderId: workOrderId,
           jobId: event.jobId,
           statusMessage,
-          errors: [error]
+          errors: [error],
+          jobType: "cp-Validation"
         })
       );
     }

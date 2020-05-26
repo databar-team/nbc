@@ -1,0 +1,14 @@
+FROM python:3.7
+
+WORKDIR /app
+
+COPY ./requirements.txt ./
+COPY ./test-requirements.txt ./
+
+RUN pip3 install --upgrade pip \
+    && pip3 install -r test-requirements.txt
+
+COPY ./app .
+COPY ./run_tests.sh .
+
+CMD ./run_tests.sh

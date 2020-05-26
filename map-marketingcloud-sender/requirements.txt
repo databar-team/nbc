@@ -1,0 +1,5 @@
+python-dotenv
+PyMySQL
+requests
+urllib3
+git+http://StashRO:BaRu3Res@git.bvops.net/scm/MAP/map-common-lambda.git#egg=kasasa_common[db,vault]

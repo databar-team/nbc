@@ -1,0 +1,6 @@
+-r requirements.txt
+pycodestyle
+pytest
+pytest-mock
+pytest-coverage
+alembic

@@ -1,0 +1,26 @@
+version: '3'
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - LOG_LEVEL=DEBUG
+      - DEBUG=true
+      - ROOT=/app
+      - SKIP_VAULT=True
+      - DATABASE_HOST=db
+      - DATABASE_PORT=3306
+      - DATABASE_USERNAME=local_admin
+      - DATABASE_PASSWORD=local_admin_password
+      - DATABASE_PASSWORD_KEY=localpassword
+    volumes:
+      - ./secrets:/app/dev-bucket/secrets
+      - ./dev-bucket:/app/dev-bucket/map-adi-worker
+    ports:
+      - 80:80
+    networks:
+      - documents_local-projects
+networks:
+  documents_local-projects:
+    external: true

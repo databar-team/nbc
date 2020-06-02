@@ -38,7 +38,9 @@ class ProductDataController:
 
 
 class ConnectionController:
-    
+    """
+    ConnectionController controls requests on the `api/v1/admin/health/` endpoint.
+    """    
     def __init__(self, context: ServiceContext = None):
         if context is None:
             context = build_context('service')
@@ -59,7 +61,9 @@ class ConnectionController:
 
 
 class WorkerProcessController:
-    
+    """
+    WorkerProcessController controls requests on the `api/v1/admin/ready/` endpoint.
+    """    
     def __init__(self, context: ServiceContext = None):
         if context is None:
             context = build_context('service')

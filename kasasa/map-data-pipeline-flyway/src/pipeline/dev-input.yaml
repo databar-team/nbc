@@ -1,0 +1,8 @@
+useSeparateTaskRunner: False
+ec2InstanceId: Ec2Instance
+ondemand: True
+runOnce: True
+schedule:
+  startDate: 2019-08-28
+  startTime: "01:00:00"
+  period: 24 hour

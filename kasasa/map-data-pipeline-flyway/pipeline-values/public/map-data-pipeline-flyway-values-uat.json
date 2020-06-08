@@ -1,0 +1,21 @@
+{
+    "values": {
+        "myS3LogsBucket": "s3://infra-ops-s3-logs-uat-us-west-2/datapipeline-logs/map-data-pipeline-flyway",
+        "myS3CodeBucket": "s3://dw-s3-code-uat-us-west-2",
+        "myDatapipelineResourceRole": "DataPipelineDefaultResourceRole",
+        "myDatapipelineRole": "DataPipelineDefaultRole",
+        "mySessionEnvironment": "us-west-2",
+        "myMapMySqlDbuser": "mapadmin",
+        "myMapMySqlDbHost": "map-main-db.uat.ksops.net",
+        "myMapMySqlDbPort": "3306",
+        "myMapSecretsBucket": "map-data-uat-us-west-2",
+        "myMapSecretsKey": "secrets/passwords.json",
+        "myMapDbPasswordKey": "aurora_master_password",
+        "myDatapipelineInstanceSubnetId": "subnet-01a670b9af8a9938b",
+        "myDatapipelineInstanceSecurityGroupId": "sg-0c4d518421aa1067c",
+        "myPipelineName": "map-data-pipeline-flyway",
+        "myAlarmARN": "arn:aws:sns:us-west-2:726622221341:map-lambda-sns-slack-uat-us-west-2",
+        "myS3DataBucket": "map-data-uat-us-west-2",
+        "myPipelineProduct": "map"
+    }
+}

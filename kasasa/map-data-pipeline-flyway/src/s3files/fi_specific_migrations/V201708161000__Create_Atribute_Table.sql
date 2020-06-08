@@ -1,0 +1,9 @@
+CREATE TABLE customer_attribute (
+  customer_kasasa_key VARCHAR(100) NOT NULL,
+  attribute_object JSON NULL,
+  create_date DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
+  modified_by VARCHAR(45) NULL DEFAULT NULL,
+  modified_date DATETIME NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  deleted_by VARCHAR(45) NULL DEFAULT NULL,
+  delete_date DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (customer_kasasa_key));

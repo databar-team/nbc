@@ -1,0 +1,19 @@
+{
+            {{! leaving first line unindented as it renders properly in the json file }}
+            "id": "PipelineSuccessNotify",
+            "name": "SuccessNotify",
+            "type": "SnsAlarm",
+            "role": "#{myDatapipelineRole}",
+            "topicArn": "#{myAlarmARN}",
+            "subject": "{\"Type\":\"Pipeline\", \"Alarm\":\"SUCCESS\", \"PipelineId\":\"#{@pipelineId}\"}",
+            "message": "{\"PipelineName\":\"#{myPipelineName}\",\"Product\":\"#{myPipelineProduct}\",\"NodeName\":\"#{node.name}\",\"Status\":\"#{node.@status}\",\"ActualStartTime\":\"#{node.@actualStartTime}\",\"ActualEndTime\":\"#{node.@actualEndTime}\",\"BuildString\":\"{{scriptsSrc}}\"}"
+        },
+        {
+            "id": "PipelineFailureNotify",
+            "name": "FailureNotify",
+            "type": "SnsAlarm",
+            "role": "#{myDatapipelineRole}",
+            "topicArn": "#{myAlarmARN}",
+            "subject": "{\"Type\":\"Pipeline\", \"Alarm\":\"FAILURE\", \"PipelineId\":\"#{@pipelineId}\"}",
+            "message": "{\"PipelineName\":\"#{myPipelineName}\",\"Product\":\"#{myPipelineProduct}\",\"NodeName\":\"#{node.name}\",\"Status\":\"#{node.@status}\",\"ActualStartTime\":\"#{node.@actualStartTime}\",\"ActualEndTime\":\"#{node.@actualEndTime}\",\"ErrorId\":\"#{node.errorId}\",\"Error\":\"#{@error}\",\"ErrorMessage\":\"#{node.errorMessage}\",\"BuildString\":\"{{scriptsSrc}}\"}"
+        }

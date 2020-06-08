@@ -1,0 +1,41 @@
+#!/bin/bash
+if [ -e flyway-4.0.3 ] ; then
+  echo "already here"
+else 
+  curl -o flyway.tar.gz https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/4.0.3/flyway-commandline-4.0.3-linux-x64.tar.gz
+  tar -zxvf flyway.tar.gz
+  rm -f flyway.tar.gz
+fi
+
+#Now check and see if we have a jre - that we might not want to use
+cd flyway-4.0.3
+if [ -e jre ] ; then 
+  mv jre jre_sav
+fi
+cd -
+
+# The config file has something like this:
+# jdbc:mysql://dw-livetech-events-dev-us-west-2a.cjpd6veor6lz.us-west-2.rds.amazonaws.com:3306/flyway and it gets passed in as the 6th parameter-values
+# When we use mysql from the command line... we need a variable that just has dw-livetech-events-dev-us-west-2a.cjpd6veor6lz.us-west-2.rds.amazonaws.com
+# And another that just has 3306
+
+# Let's get a list of all the fi's...
+HOST_NAME=localhost
+PORT=3306
+USERNAME=${USER}
+PASSWORD=YOUR_PASS
+
+#If you wish to run for the map_config, data_quality or livetech schemas toggle the comments on the LOCAL_DIR and the #for fi in data_quality lines below
+LOCAL_DIR=src/fi_specific_migrations
+#LOCAL_DIR=src/sql
+
+#The Amazon version of MySQL/RDS has the following settings which need to be set at the Global level - doing that now
+mysql -h $HOST_NAME -P $PORT --skip-column-names -u $USERNAME --password=${PASSWORD} -e "SET GLOBAL sql_mode = 'NO_ENGINE_SUBSTITUTION'; SET SESSION sql_mode = 'NO_ENGINE_SUBSTITUTION';"
+
+for fi in $(mysql -h $HOST_NAME -P $PORT --skip-column-names -u $USERNAME --password=${PASSWORD} -e "show databases like 'fi\_%'"); do
+#for fi in data_quality; do
+  #Invoke flyway here...
+  echo ${fi}
+  URL="jdbc:mysql://${HOST_NAME}:${PORT}/${fi}"
+  ./flyway-4.0.3/flyway migrate -user=${USERNAME} -password=${PASSWORD} -url=${URL} -locations=filesystem:${LOCAL_DIR}
+done

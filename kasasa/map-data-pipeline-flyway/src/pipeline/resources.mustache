@@ -1,0 +1,28 @@
+{
+    "name": "ParentOfStepsThatNeedARunner",
+    "id": "ParentOfStepsThatNeedARunner",
+    {{#useSeparateTaskRunner}}
+    "workerGroup": "#{myWorkerGroup}"
+    {{/useSeparateTaskRunner}}
+    {{^useSeparateTaskRunner}}
+    "runsOn": {
+        "ref": "Ec2Instance"
+    }
+    {{/useSeparateTaskRunner}}
+},
+{{^useSeparateTaskRunner}}
+{
+    "terminateAfter": "1 Hours",
+    "name": "EC2",
+    "resourceRole": "#{myDatapipelineResourceRole}",
+    "region": "us-west-2",
+    "role": "#{myDatapipelineRole}",
+    "subnetId": "#{myDatapipelineInstanceSubnetId}",
+    "type": "Ec2Resource",
+    "id": "Ec2Instance",
+    "instanceType": "m4.large",
+    "associatePublicIpAddress": "false",
+    "imageId": "ami-f0091d91",
+    "securityGroupIds": ["#{myDatapipelineInstanceSecurityGroupId}"]
+}
+{{/useSeparateTaskRunner}}

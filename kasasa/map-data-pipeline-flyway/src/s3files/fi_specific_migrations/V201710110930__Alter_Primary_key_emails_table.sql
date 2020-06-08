@@ -1,0 +1,1 @@
+ALTER TABLE emails ADD PRIMARY KEY (kasasakey, key_type);

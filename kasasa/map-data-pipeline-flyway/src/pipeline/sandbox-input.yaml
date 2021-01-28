@@ -1,7 +1,0 @@
-useSeparateTaskRunner: false
-ondemand: false
-runOnce: false
-schedule:
-  startDate: 2019-08-28
-  startTime: "01:00:00"
-  period: 24 hour

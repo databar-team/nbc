@@ -1,1 +1,0 @@
-alter table account_events DROP PRIMARY KEY;

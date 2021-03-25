@@ -4,7 +4,7 @@ botocore==1.10.74
 futures==3.0.5
 jmespath==0.9.0
 pystache==0.5.4
-PyYAML==3.12
+PyYAML==5.4
 six==1.10.0
 PyMySQL==0.7.11
 backports.tempfile
